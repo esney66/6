@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
 
 const ScrollEffects = () => {
+  // Calculate section height based on viewport (80% of window height)
+  /* eslint-disable-next-line no-unused-vars */
+  const sectionHeight = window.innerHeight * 0.8;
+
   useEffect(() => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
