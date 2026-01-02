@@ -1,9 +1,6 @@
 import { useEffect } from 'react';
 
 const ScrollEffects = () => {
-  // Calculate section height based on viewport (80% of window height)
-  /* eslint-disable-next-line no-unused-vars */
-
   useEffect(() => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -25,9 +22,10 @@ const ScrollEffects = () => {
       const navLinks = document.querySelectorAll('nav ul li a');
 
       let current = '';
+      // Calculate section height based on viewport (80% of window height)
+      const sectionHeight = window.innerHeight * 0.8;
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
         if (window.scrollY >= sectionTop) {
           current = section.getAttribute('id');
         }
