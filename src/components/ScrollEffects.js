@@ -22,8 +22,6 @@ const ScrollEffects = () => {
       const navLinks = document.querySelectorAll('nav ul li a');
 
       let current = '';
-      // Calculate section height based on viewport (80% of window height)
-      const sectionHeight = window.innerHeight * 0.8;
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         if (window.scrollY >= sectionTop) {
